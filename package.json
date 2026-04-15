@@ -1,0 +1,9 @@
+{
+  "name": "test-officeagent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "officeagent.kr clone for chatbot SDK testing",
+  "scripts": {
+    "start": "node serve.js"
+  }
+}
