@@ -1,10 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const url = require('url');
-
 const PORT = 8005;
-const PUBLIC_DIR = path.join(__dirname, 'public');
+const PUBLIC_DIR = __dirname;
 
 // MIME type mapping
 const MIME_TYPES = {
@@ -84,8 +82,7 @@ function serve404(res) {
 }
 
 const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url);
-  const pathname = parsedUrl.pathname;
+  const pathname = new URL(req.url, `http://${req.headers.host}`).pathname;
 
   console.log(`${req.method} ${pathname}`);
 

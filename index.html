@@ -435,5 +435,36 @@
   <div id="footer"></div>
   <script src="/js/common.js"></script>
   <script src="/js/chatbot.js"></script>
+  <script>
+  (function() {
+    const track = document.getElementById('blogSliderTrack');
+    const prevBtn = document.getElementById('blogPrev');
+    const nextBtn = document.getElementById('blogNext');
+    const dots = document.querySelectorAll('.slider-dot');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    let current = 0;
+    const cards = track.children;
+    const total = cards.length;
+
+    function getCardWidth() {
+      return cards[0].offsetWidth + 24;
+    }
+
+    function slideTo(index) {
+      current = Math.max(0, Math.min(index, total - 1));
+      track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+      dots.forEach(function(d, i) {
+        d.classList.toggle('slider-dot--active', i === current);
+      });
+    }
+
+    prevBtn.addEventListener('click', function() { slideTo(current - 1); });
+    nextBtn.addEventListener('click', function() { slideTo(current + 1); });
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { slideTo(i); });
+    });
+  })();
+  </script>
 </body>
 </html>
