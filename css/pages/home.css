@@ -4,7 +4,7 @@
    Hero
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 50%, #f5f0ff 100%);
+  background: linear-gradient(135deg, #0d0d2b 0%, #1a1040 50%, #0d0d2b 100%);
   padding-top: calc(var(--header-height) + 80px);
   padding-bottom: 80px;
   overflow: hidden;
@@ -32,9 +32,9 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  background-color: rgba(37, 99, 235, 0.08);
+  background-color: rgba(124, 92, 252, 0.15);
   color: var(--color-primary);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(124, 92, 252, 0.3);
   border-radius: 100px;
   padding: 5px 14px;
   font-size: 0.8125rem;
@@ -80,7 +80,6 @@
    ============================================================ */
 .core-values {
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .core-values-grid {
@@ -96,9 +95,10 @@
   align-items: flex-start;
   gap: 12px;
   padding: 32px;
-  background: var(--color-bg-light);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
@@ -129,7 +129,7 @@
    Dashboard Preview
    ============================================================ */
 .dashboard-preview {
-  background: var(--color-bg-dark);
+  background: var(--color-bg);
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -175,9 +175,10 @@
   flex-direction: column;
   gap: 12px;
   padding: 28px 24px;
-  background: var(--color-bg-light);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), border-color var(--transition);
 }
 
@@ -215,6 +216,7 @@
    ============================================================ */
 .philosophies {
   background: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
 }
 
 .philosophies-header {
@@ -235,13 +237,14 @@
 }
 
 .philosophy-card {
-  background: var(--color-bg);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
@@ -332,6 +335,7 @@
    ============================================================ */
 .core-features {
   background: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
 }
 
 .core-features-header {
@@ -350,12 +354,13 @@
 }
 
 .feature-card {
-  background: var(--color-bg);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
@@ -365,7 +370,7 @@
 }
 
 .feature-card-image {
-  background: linear-gradient(135deg, #f0f6ff 0%, #e8f0ff 100%);
+  background: linear-gradient(135deg, rgba(124,92,252,0.1) 0%, rgba(30,20,60,0.3) 100%);
   padding: 32px;
   display: flex;
   justify-content: center;
@@ -490,10 +495,11 @@
 }
 
 .blog-card {
-  background: var(--color-bg);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 

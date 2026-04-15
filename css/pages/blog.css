@@ -50,12 +50,13 @@
   border-bottom: 2px solid transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition: color var(--transition), border-color var(--transition);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
   margin-bottom: -1px;
 }
 
 .blog-filter-tab:hover {
   color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .blog-filter-tab.active {
@@ -86,12 +87,13 @@
 .blog-card {
   display: flex;
   flex-direction: column;
-  background: var(--color-bg);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 

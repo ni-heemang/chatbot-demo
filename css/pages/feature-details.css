@@ -4,7 +4,7 @@
    Hero Section
    ============================================================ */
 .hero-section {
-  background: linear-gradient(135deg, #eff6ff 0%, #f8f9fa 60%, #ffffff 100%);
+  background: linear-gradient(135deg, #0a0a2e 0%, #12122a 60%, var(--color-bg) 100%);
   padding: 80px 0 72px;
   text-align: center;
 }
@@ -46,11 +46,12 @@
   padding: 10px 20px;
   border-radius: 100px;
   border: 1.5px solid var(--color-border);
-  background-color: var(--color-bg);
+  background: var(--color-bg-card);
   color: var(--color-text-secondary);
   font-size: 0.9375rem;
   font-weight: 500;
   cursor: pointer;
+  backdrop-filter: blur(8px);
   transition: background-color var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
   white-space: nowrap;
 }
@@ -65,7 +66,7 @@
   background-color: var(--color-primary);
   color: #ffffff;
   border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 8px rgba(124, 92, 252, 0.4);
 }
 
 /* ============================================================
@@ -83,10 +84,11 @@
 .feature-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg);
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
+  backdrop-filter: blur(12px);
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
 
@@ -164,7 +166,7 @@
    CTA Section
    ============================================================ */
 .cta-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #1a0a3e 0%, var(--color-primary) 50%, #0a1a4e 100%);
   padding: 80px 0;
   text-align: center;
 }
@@ -191,16 +193,18 @@
 }
 
 .cta-section .btn-primary {
-  background-color: #ffffff;
-  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 14px 32px;
   font-size: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section .btn-primary:hover {
-  background-color: #f0f7ff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ============================================================

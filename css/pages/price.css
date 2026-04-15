@@ -4,7 +4,7 @@
    Hero
    ============================================================ */
 .price-hero {
-  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 60%, #f0fdf4 100%);
+  background: linear-gradient(135deg, #0a0a2e 0%, #12122a 60%, var(--color-bg) 100%);
   text-align: center;
 }
 
@@ -40,13 +40,14 @@
 }
 
 .plan-card {
-  background: var(--color-bg);
+  background: var(--color-bg-card);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(124, 92, 252, 0.15);
   padding: 48px 40px;
   width: 100%;
   max-width: 520px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(124, 92, 252, 0.3);
+  backdrop-filter: blur(12px);
 }
 
 /* Card Header */
@@ -114,13 +115,13 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #fef3c7;
-  color: #92400e;
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 6px 14px;
   border-radius: 100px;
-  border: 1px solid #fde68a;
+  border: 1px solid rgba(251, 191, 36, 0.3);
 }
 
 /* Features Checklist */
@@ -226,7 +227,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(124, 92, 252, 0.4);
   margin-bottom: 20px;
 }
 
