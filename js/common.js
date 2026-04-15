@@ -12,7 +12,7 @@ function injectHeader() {
   placeholder.outerHTML = `<header class="site-header">
   <div class="header-inner">
     <a href="/" class="header-logo">
-      <img src="https://cdn.prod.website-files.com/69a92999adf230c97361a6c2/69a92999adf230c97361a735_logo_officeagent.svg" alt="OfficeAgent" height="32">
+      <img src="https://cdn.prod.website-files.com/69a92999adf230c97361a6c2/69ba2bf9ccc7adf28d952a5e_OA_logo.svg" alt="OfficeAgent" height="32">
     </a>
     <nav class="header-nav" id="headerNav">
       <div class="nav-item">
@@ -55,7 +55,7 @@ function injectFooter() {
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="https://cdn.prod.website-files.com/69a92999adf230c97361a6c2/69a92999adf230c97361a735_logo_officeagent.svg" alt="OfficeAgent" height="28" style="filter: brightness(0) invert(1);">
+        <img src="https://cdn.prod.website-files.com/69a92999adf230c97361a6c2/69ba2bf9ccc7adf28d952a5e_OA_logo.svg" alt="OfficeAgent" height="28" style="filter: brightness(0) invert(1);">
         <p>우리 회사 데이터를 가장 잘 이해하는 AI</p>
       </div>
       <div class="footer-links">
