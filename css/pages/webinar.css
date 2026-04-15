@@ -1,0 +1,24 @@
+.webinar-hero { padding: 60px 0 40px; }
+
+.webinar-content { padding-bottom: 80px; }
+
+.webinar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.webinar-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md, 12px);
+  display: block;
+}
+
+.webinar-card .btn-primary {
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+}

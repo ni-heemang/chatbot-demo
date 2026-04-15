@@ -1,0 +1,673 @@
+/* office-agent.css */
+
+/* ============================================================
+   Hero Section
+   ============================================================ */
+.hero-section {
+  background: linear-gradient(135deg, #f0f5ff 0%, #eef2ff 60%, #f8f9fa 100%);
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.hero-brand {
+  display: block;
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 36px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn-primary,
+.hero-cta .btn-outline {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 16px 40px rgba(37, 99, 235, 0.15));
+}
+
+/* ============================================================
+   Features Section (3 pillars)
+   ============================================================ */
+.features-section {
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.features-header {
+  margin-bottom: 40px;
+}
+
+.features-eyebrow {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.features-header .section-title {
+  margin-bottom: 28px;
+}
+
+.features-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features-pills {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 10px 24px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   4 Function Cards
+   ============================================================ */
+.function-cards-section {
+  background-color: var(--color-bg-light);
+}
+
+.function-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.function-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.function-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.function-card-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.function-card-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.function-card-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.function-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   Value Propositions (alternating)
+   ============================================================ */
+.value-section {
+  background-color: var(--color-bg);
+}
+
+.value-section-title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.value-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.value-row:last-child {
+  margin-bottom: 0;
+}
+
+.value-row.reverse {
+  direction: rtl;
+}
+
+.value-row.reverse > * {
+  direction: ltr;
+}
+
+.value-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.value-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.value-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   Core Function Cards
+   ============================================================ */
+.core-functions-section {
+  background-color: var(--color-bg-light);
+}
+
+.core-functions-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.core-functions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.core-function-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.core-function-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.core-function-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.core-function-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.core-function-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 20px 24px 10px;
+  line-height: 1.4;
+}
+
+.core-function-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0 24px 24px;
+}
+
+/* ============================================================
+   Operational Ease (3 steps)
+   ============================================================ */
+.ops-section {
+  background-color: var(--color-bg);
+}
+
+.ops-section-title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.ops-brand {
+  color: var(--color-primary);
+}
+
+.ops-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.ops-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.ops-step-reverse {
+  direction: rtl;
+}
+
+.ops-step-reverse > * {
+  direction: ltr;
+}
+
+.ops-step-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ops-step-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.ops-step-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-primary-light);
+  line-height: 1;
+  margin-bottom: 16px;
+  font-family: var(--font-en);
+}
+
+.ops-step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.ops-step-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================
+   Integration Section
+   ============================================================ */
+.integration-section {
+  background-color: var(--color-bg-light);
+}
+
+.integration-section-title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.integration-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 56px;
+}
+
+.integration-block:last-child {
+  margin-bottom: 0;
+}
+
+.integration-block-reverse {
+  direction: rtl;
+}
+
+.integration-block-reverse > * {
+  direction: ltr;
+}
+
+.integration-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.integration-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.integration-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.integration-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.integration-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.integration-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.integration-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Final CTA Section
+   ============================================================ */
+.cta-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.cta-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.cta-brand {
+  color: #bfdbfe;
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  padding: 16px 48px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+.cta-btn:hover {
+  background-color: #f0f9ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   Responsive — 1199px and below
+   ============================================================ */
+@media (max-width: 1199px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .function-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-row,
+  .ops-step {
+    gap: 48px;
+  }
+
+  .integration-block {
+    gap: 48px;
+    padding: 40px;
+  }
+}
+
+/* ============================================================
+   Responsive — 767px and below (mobile)
+   ============================================================ */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 48px);
+    padding-bottom: 48px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-brand {
+    font-size: 1.375rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  /* Features pills */
+  .features-pills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Function Cards */
+  .function-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Value rows */
+  .value-section-title,
+  .core-functions-title,
+  .ops-section-title,
+  .integration-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .value-row,
+  .value-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+    margin-bottom: 56px;
+  }
+
+  .value-row.reverse > * {
+    direction: ltr;
+  }
+
+  .value-title {
+    font-size: 1.375rem;
+  }
+
+  /* Core Functions */
+  .core-functions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ops steps */
+  .ops-step,
+  .ops-step-reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+  }
+
+  .ops-step-reverse > * {
+    direction: ltr;
+  }
+
+  .ops-steps {
+    gap: 56px;
+  }
+
+  .ops-step-title {
+    font-size: 1.25rem;
+  }
+
+  .ops-step-number {
+    font-size: 2rem;
+  }
+
+  /* Integration */
+  .integration-block,
+  .integration-block-reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+    padding: 32px 24px;
+    margin-bottom: 32px;
+  }
+
+  .integration-block-reverse > * {
+    direction: ltr;
+  }
+
+  .integration-title {
+    font-size: 1.375rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 64px 0;
+  }
+
+  .cta-title {
+    font-size: 1.625rem;
+  }
+
+  .cta-btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+}

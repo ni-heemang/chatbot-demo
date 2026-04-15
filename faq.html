@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - OfficeAgent</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/pages/faq.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="faq-hero section">
+      <div class="container" style="text-align:center;">
+        <h1 class="section-title">AI 도입 전에 가장 궁금한 질문들</h1>
+      </div>
+    </section>
+    <section class="faq-content section">
+      <div class="faq-container container">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>우리 회사 데이터가 외부로 유출되지는 않나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>기업 데이터가 외부로 나가지 않도록 구조적으로 설계되어 있으며, 모든 데이터는 고객사 전용 환경에서만 처리됩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>ChatGPT와 비교했을 때 어떤 차이가 있나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>오피스에이전트가 '우리 회사 데이터를 이해하는 AI'라는 점입니다. 일반 AI는 공개된 정보 중심으로 답변을 생성하지만, 오피스에이전트는 사내 문서, 이메일, 규정 등을 직접 기반으로 답변합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>AI 답변의 신뢰도는 어느 정도인가요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>모든 답변에 대해 근거를 함께 제공하는 구조로 설계되어 신뢰도를 높였습니다. 해당 답변이 어떤 문서의 어느 페이지에서 도출되었는지를 함께 보여줍니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>IT 인력이 없어도 도입이 가능한가요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No-Code 기반으로 설계되어 있어 별도의 개발 지식 없이도 누구나 쉽게 사용할 수 있습니다. 약 1분 내에 AI 에이전트를 만들 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>실제로 어떤 업무에 활용할 수 있나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>대부분의 지식 기반 업무에서 활용할 수 있습니다. 인사팀의 규정 질의응답, 법무팀의 계약서 검토, 영업팀의 회의록 요약 등이 가능합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>사용자 권한이나 접근 통제는 어떻게 관리되나요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>RBAC 기반으로 사용자별 접근 권한을 설정할 수 있으며, 부서별로 문서 접근 범위를 제한할 수 있습니다. 워크스페이스 간 데이터가 완전히 분리됩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>도입 시 기대할 수 있는 효과는 무엇인가요?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>생산성과 보안을 동시에 개선하는 효과를 기대할 수 있습니다. 반복적인 정보 검색 시간이 줄어들고 의사결정 속도가 빨라집니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/chatbot.js"></script>
+  <script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도입 상담 - OfficeAgent</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/pages/form-page.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="form-page-hero">
+      <h1>OfficeAgent 도입 상담을 받아보세요</h1>
+    </section>
+    <div class="form-container">
+      <form novalidate>
+        <div class="form-group">
+          <label for="company">회사명<span class="required">*</span></label>
+          <input type="text" id="company" name="company" required placeholder="회사명을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="name">이름<span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일<span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="이메일을 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="phone">전화번호<span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" required placeholder="전화번호를 입력하세요">
+        </div>
+        <div class="form-group">
+          <label for="employees">직원수<span class="required">*</span></label>
+          <select id="employees" name="employees" required>
+            <option value="" disabled selected>직원수를 선택하세요</option>
+            <option value="under10">10명 미만</option>
+            <option value="10to50">10-50명</option>
+            <option value="50to100">50-100명</option>
+            <option value="100to500">100-500명</option>
+            <option value="over500">500명 이상</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="industry">업종<span class="required">*</span></label>
+          <select id="industry" name="industry" required>
+            <option value="" disabled selected>업종을 선택하세요</option>
+            <option value="it">IT/소프트웨어</option>
+            <option value="manufacturing">제조</option>
+            <option value="finance">금융</option>
+            <option value="education">교육</option>
+            <option value="medical">의료</option>
+            <option value="distribution">유통</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="inquiry">추가 문의사항</label>
+          <textarea id="inquiry" name="inquiry" placeholder="추가 문의사항을 입력하세요 (선택)"></textarea>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="agree-privacy" name="agree-privacy" required>
+          <label for="agree-privacy">개인정보 수집 및 이용에 동의합니다 <span class="required">*</span></label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="agree-marketing" name="agree-marketing">
+          <label for="agree-marketing">마케팅 정보 수집 및 활용에 동의합니다 <span class="optional">(선택)</span></label>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">도입 상담 신청</button>
+      </form>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/chatbot.js"></script>
+  <script>
+document.querySelector('.form-container form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('데모 페이지입니다. 실제 폼 제출은 지원되지 않습니다.');
+});
+  </script>
+</body>
+</html>
