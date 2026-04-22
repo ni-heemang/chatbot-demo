@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const PORT = 8005;
+const PORT = 8080;
 const PUBLIC_DIR = __dirname;
 
 // MIME type mapping

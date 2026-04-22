@@ -28,6 +28,19 @@
   </main>
   <div id="footer"></div>
   <script src="/js/common.js"></script>
-  <script src="/js/chatbot.js"></script>
+  <script type="module" src="https://staging.chatbot.officeagent.kr/widget-loader.js"></script>
+  <script type="module">
+    (function () {
+      function whenReady(fn) {
+        if (typeof window.ChatWidget?.init === 'function') { fn(); return; }
+        requestAnimationFrame(() => whenReady(fn));
+      }
+      whenReady(() => {
+        window.ChatWidget.init({
+          site_key: '__SITE_KEY__',
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
