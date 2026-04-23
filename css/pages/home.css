@@ -4,9 +4,10 @@
    Hero
    ============================================================ */
 .hero {
+  position: relative;
   background: linear-gradient(135deg, #0d0d2b 0%, #1a1040 50%, #0d0d2b 100%);
-  padding-top: calc(var(--header-height) + 80px);
-  padding-bottom: 80px;
+  padding-top: calc(var(--header-height) + 100px);
+  padding-bottom: 120px;
   overflow: hidden;
 }
 
@@ -20,29 +21,26 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.hero-badge {
+.hero-pill {
   display: inline-flex;
   align-items: center;
-  background-color: rgba(124, 92, 252, 0.15);
+  background-color: rgba(124, 92, 252, 0.12);
   color: var(--color-primary);
-  border: 1px solid rgba(124, 92, 252, 0.3);
+  border: 1px solid rgba(124, 92, 252, 0.25);
   border-radius: 100px;
-  padding: 5px 14px;
-  font-size: 0.8125rem;
+  padding: 8px 20px;
+  font-size: 0.875rem;
   font-weight: 500;
+  font-family: var(--font-en);
+  width: fit-content;
+  letter-spacing: 0.02em;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.75rem;
   font-weight: 800;
   color: var(--color-text);
   line-height: 1.25;
@@ -50,15 +48,36 @@
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
+  font-size: 1.1875rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
+}
+
+.hero-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero-check-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.hero-check-item svg {
+  flex-shrink: 0;
 }
 
 .hero-cta {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 
 .hero-image {
@@ -72,57 +91,18 @@
   max-width: 600px;
   height: auto;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
 }
 
-/* ============================================================
-   Core Values
-   ============================================================ */
-.core-values {
-  background-color: var(--color-bg);
-}
-
-.core-values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  list-style: none;
-}
-
-.core-value-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 32px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(12px);
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-
-.core-value-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-}
-
-.core-value-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-.core-value-title {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-.core-value-desc {
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-  line-height: 1.65;
+.hero-glow {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(124, 92, 252, 0.25) 0%, rgba(124, 92, 252, 0.08) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ============================================================
@@ -149,6 +129,18 @@
 }
 
 /* ============================================================
+   Section Label
+   ============================================================ */
+.section-label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
    Adoption Elements
    ============================================================ */
 .adoption-elements {
@@ -157,8 +149,8 @@
 
 .adoption-header {
   text-align: center;
-  max-width: 640px;
-  margin: 0 auto 56px;
+  max-width: 700px;
+  margin: 0 auto 64px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -169,14 +161,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   list-style: none;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .adoption-item {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 28px 24px;
+  padding: 32px 24px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -186,7 +178,7 @@
 
 .adoption-item:hover {
   box-shadow: var(--shadow-md);
-  border-color: var(--color-primary-light);
+  border-color: rgba(124, 92, 252, 0.4);
 }
 
 .adoption-number {
@@ -209,6 +201,49 @@
   line-height: 1.65;
 }
 
+/* Timeline indicator */
+.adoption-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  margin-bottom: 48px;
+  padding: 0 60px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: var(--color-border);
+  transform: translateY(-50%);
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  max-width: 12px;
+}
+
+.timeline-dot:not(:first-of-type) {
+  margin-left: auto;
+}
+
+.timeline-dot--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(124, 92, 252, 0.5);
+}
+
 .adoption-cta {
   text-align: center;
 }
@@ -217,8 +252,22 @@
    Philosophies
    ============================================================ */
 .philosophies {
+  position: relative;
   background: var(--color-bg-light);
   border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.philosophies::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(124, 92, 252, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .philosophies-header {
@@ -255,10 +304,19 @@
   transform: translateY(-4px);
 }
 
-.philosophy-icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+.philosophy-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(124, 92, 252, 0.15);
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: var(--font-en);
+  flex-shrink: 0;
 }
 
 .philosophy-title {
@@ -336,8 +394,21 @@
    Core Features
    ============================================================ */
 .core-features {
+  position: relative;
   background: var(--color-bg-light);
   border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.core-features::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, rgba(124, 92, 252, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .core-features-header {
@@ -555,6 +626,18 @@
   line-height: 1.5;
 }
 
+.blog-card-readmore {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: auto;
+  padding-top: 8px;
+  font-family: var(--font-en);
+  transition: gap var(--transition);
+}
+
 .blog-slider-controls {
   display: flex;
   align-items: center;
@@ -582,10 +665,12 @@
   box-shadow: var(--shadow-sm);
 }
 
-.slider-arrow img {
+.slider-arrow img,
+.slider-arrow svg {
   width: 16px;
   height: 16px;
   object-fit: contain;
+  color: var(--color-text);
 }
 
 .slider-dots {
@@ -616,7 +701,7 @@
    ============================================================ */
 @media (max-width: 1199px) {
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
   }
 
   .adoption-grid {
@@ -656,8 +741,8 @@
    ============================================================ */
 @media (max-width: 767px) {
   .hero {
-    padding-top: calc(var(--header-height) + 40px);
-    padding-bottom: 48px;
+    padding-top: calc(var(--header-height) + 48px);
+    padding-bottom: 64px;
   }
 
   .hero-inner {
@@ -666,11 +751,16 @@
   }
 
   .hero-title {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-checks {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .hero-cta {
@@ -680,10 +770,6 @@
 
   .hero-image {
     order: -1;
-  }
-
-  .core-values-grid {
-    grid-template-columns: 1fr;
   }
 
   .adoption-grid {

@@ -42,9 +42,10 @@ body {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-text);
+  line-height: 1.35;
 }
 
 .section-subtitle {
@@ -64,8 +65,8 @@ body {
 }
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 main {
@@ -160,9 +161,10 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   background-color: var(--color-primary);
   color: #ffffff;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border-radius: var(--radius-sm);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -172,26 +174,33 @@ main {
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 20px rgba(124, 92, 252, 0.35);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   background-color: transparent;
-  color: var(--color-primary);
-  padding: 10px 24px;
+  color: var(--color-text);
+  padding: 12px 28px;
   border-radius: var(--radius-sm);
-  border: 1.5px solid var(--color-primary);
+  border: 1.5px solid var(--color-border);
   font-size: 0.9375rem;
   font-weight: 600;
-  transition: background-color var(--transition), color var(--transition);
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
   white-space: nowrap;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-primary-light);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-text-secondary);
+}
+
+/* Pill variant */
+.btn-pill {
+  border-radius: 100px;
 }
 
 /* Mobile toggle */
@@ -353,12 +362,12 @@ main {
 
   /* Section */
   .section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 
   /* Footer */
