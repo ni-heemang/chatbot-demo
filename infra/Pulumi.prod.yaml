@@ -9,4 +9,5 @@ config:
     app:p1AccountId: '037684266277'
     app:skipDomainSetup: 'false'
     app:skipAssetUpload: 'false'
-    app:siteKey: pk_872abc7380e7c636b571a8aab7fb1479
+    app:siteKey: pk_a2f190511dd3fe666e6830c697155f11
+    app:chatbotDomain: https://chatbot.officeagent.kr

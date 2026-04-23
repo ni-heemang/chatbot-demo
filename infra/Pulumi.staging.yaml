@@ -10,3 +10,4 @@ config:
     app:skipDomainSetup: 'false'
     app:skipAssetUpload: 'false'
     app:siteKey: pk_872abc7380e7c636b571a8aab7fb1479
+    app:chatbotDomain: https://staging.chatbot.officeagent.kr

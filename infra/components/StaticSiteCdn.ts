@@ -274,10 +274,12 @@ export class StaticSiteCdn extends pulumi.ComponentResource {
                 const ext = path.extname(key).toLowerCase();
                 const isHtml = ext === '.html';
                 const source: pulumi.Input<pulumi.asset.Asset> = isHtml
-                    ? pulumi.output(siteKey).apply(
-                          (k) =>
+                    ? pulumi.all([siteKey, appConfig.chatbotDomain]).apply(
+                          ([k, chatbotDomain]) =>
                               new pulumi.asset.StringAsset(
-                                  fs.readFileSync(absPath, 'utf8').replace(/__SITE_KEY__/g, k),
+                                  fs.readFileSync(absPath, 'utf8')
+                                      .replace(/__SITE_KEY__/g, k)
+                                      .replace(/__CHATBOT_DOMAIN__/g, chatbotDomain),
                               ),
                       )
                     : new pulumi.asset.FileAsset(absPath);

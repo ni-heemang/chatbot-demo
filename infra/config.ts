@@ -10,6 +10,7 @@ export class AppConfig {
     public readonly skipDomainSetup: boolean;
     public readonly skipAssetUpload: boolean;
     public readonly siteKey: string;
+    public readonly chatbotDomain: string;
 
     constructor() {
         const config = new pulumi.Config('app');
@@ -24,6 +25,7 @@ export class AppConfig {
         this.skipDomainSetup = config.getBoolean('skipDomainSetup') ?? false;
         this.skipAssetUpload = config.getBoolean('skipAssetUpload') ?? false;
         this.siteKey = config.get('siteKey') ?? '';
+        this.chatbotDomain = config.get('chatbotDomain') ?? '';
     }
 
     public get p1CrossAccountRoleArn(): string {

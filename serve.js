@@ -4,7 +4,7 @@ const path = require('path');
 const PORT = 8080;
 const PUBLIC_DIR = __dirname;
 const LOCAL_SITE_KEY = 'pk_19fad37d1a2089fa935727fe76b47ccf';
-const LOCAL_WIDGET_LOADER = 'http://localhost:3001/widget-loader.js';
+const LOCAL_WIDGET_LOADER = 'http://localhost:3001';
 const STAGING_WIDGET_LOADER = 'https://staging.chatbot.officeagent.kr/widget-loader.js';
 
 // MIME type mapping
@@ -79,6 +79,7 @@ function serveFile(filePath, res) {
       body = data
         .toString('utf8')
         .replace(/__SITE_KEY__/g, LOCAL_SITE_KEY)
+        .replace(/__CHATBOT_DOMAIN__/g, LOCAL_WIDGET_LOADER)
         .split(STAGING_WIDGET_LOADER).join(LOCAL_WIDGET_LOADER);
     }
     res.writeHead(200, { 'Content-Type': mimeType });
