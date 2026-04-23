@@ -2,7 +2,8 @@
     "name": "test-officeagent",
     "main": "index.ts",
     "scripts": {
-        "deploy:staging": "export AWS_PROFILE=officemail-prod; pulumi login 's3://pulumi-state-kr-prod?region=ap-northeast-2'; pulumi stack select staging; pulumi up"
+        "deploy:staging": "export AWS_PROFILE=officemail-prod; pulumi login 's3://pulumi-state-kr-prod?region=ap-northeast-2'; pulumi stack select staging; pulumi up",
+        "deploy:prod": "export AWS_PROFILE=officemail-prod; pulumi login 's3://pulumi-state-kr-prod?region=ap-northeast-2'; pulumi stack select prod; pulumi up"
     },
     "devDependencies": {
         "@types/node": "^18",

@@ -12,12 +12,11 @@ const awsProvider = new aws.Provider('default', {
     defaultTags: { tags: config.defaultTags },
 });
 
-const appName = 'test-officeagent';
 const siteRoot = path.resolve(__dirname, '..');
 
-const site = new StaticSiteCdn(appName, {
+const site = new StaticSiteCdn(config.appName, {
     appConfig: config,
-    appName,
+    appName: config.appName,
     siteRoot,
     siteKey: config.siteKey,
 }, { provider: awsProvider });

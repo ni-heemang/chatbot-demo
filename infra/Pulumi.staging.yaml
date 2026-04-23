@@ -2,6 +2,7 @@ secretsprovider: awskms://alias/pulumi-secrets-prod?region=ap-northeast-2
 encryptedkey: AQICAHhrkDrAC78l9phNpJsf11VsafO8k88Fs6NYm5VUW4hX1gGgRhHGrXJI3GGCVy1xN+ZJAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMgV8mrWwBhy9MkOJgAgEQgDsXJpXGYqJm6W6BJc6M+Z68imG++6WVxLmu7XpDDZS7KgcmC4zR6zdFSHbVfBIukRwEyXOtYBCS3f0v6g==
 config:
     aws:region: ap-northeast-2
+    app:appName: test-officeagent
     app:env: staging
     app:hostedZone: officeagent.kr
     app:domain: test.officeagent.kr

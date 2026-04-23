@@ -1,6 +1,7 @@
 import * as pulumi from '@pulumi/pulumi';
 
 export class AppConfig {
+    public readonly appName: string;
     public readonly env: string;
     public readonly region: string;
     public readonly hostedZone: string;
@@ -14,6 +15,7 @@ export class AppConfig {
         const config = new pulumi.Config('app');
         const awsConfig = new pulumi.Config('aws');
 
+        this.appName = config.require('appName');
         this.env = config.require('env');
         this.hostedZone = config.get('hostedZone') ?? '';
         this.domain = config.get('domain') ?? '';
@@ -30,9 +32,9 @@ export class AppConfig {
 
     public get defaultTags(): Record<string, string> {
         return {
-            Component: 'test-officeagent',
+            Component: this.appName,
             Environment: this.env,
-            Name: `test-officeagent-${this.env}`,
+            Name: `${this.appName}-${this.env}`,
             Service: 'officeagent',
         };
     }
