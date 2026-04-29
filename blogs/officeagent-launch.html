@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지란지교소프트, 보안과 생산성 다 잡은 기업용 AI '오피스에이전트' 출시 - OfficeAgent Blog</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/pages/blog.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <article class="blog-post">
+      <div class="blog-post-hero">
+        <span class="blog-category-tag">OA소식</span>
+        <h1>지란지교소프트, 보안과 생산성 다 잡은<br>기업용 AI '오피스에이전트' 출시</h1>
+        <div class="blog-post-meta">
+          <span>Apr 15, 2026</span> · <span>5 min read</span>
+        </div>
+      </div>
+      <div class="blog-post-body container">
+        <p><img src="https://cdn.prod.website-files.com/69a9299aadf230c97361a778/69e03c37d9bf1a3ef34f076c_2128_1200_home.png" alt="오피스에이전트 출시" style="width:100%;border-radius:12px;"></p>
+
+        <p>지란지교소프트(대표 박승애)가 기업의 보안 걱정 없이 사내 데이터를 기반으로 업무를 수행하는 기업용 AI 솔루션 <strong>'오피스에이전트(OfficeAgent)'</strong>를 4월 15일 정식 출시했다.</p>
+        <p>오피스에이전트는 기업들이 생성형 AI 도입 시 겪는 세 가지 주요 문제를 해결하기 위해 개발됐다. 보안 유출(Shadow AI), 답변의 불확실성(Hallucination), 고액의 도입 비용이 그것이다.</p>
+
+        <h2>보안과 생산성의 공존</h2>
+        <p>제품의 핵심은 <strong>'보안'과 '생산성'</strong>의 공존이다.</p>
+        <ul>
+          <li>권한 기반 접근 제어(RBAC)를 통해 인가된 사용자만 데이터 접근 가능</li>
+          <li>사용자 입력 데이터가 AI 모델 학습에 활용되지 않는 '학습 배제 원칙' 준수</li>
+          <li>민감 정보(주민등록번호, 휴대전화 번호 등) 자동 마스킹 처리 기능 준비 중</li>
+        </ul>
+
+        <h2>에이전틱 RAG 기술</h2>
+        <p>"질문의 의도를 분석하는" <strong>'에이전틱 RAG(Agentic Retrieval-Augmented Generation)'</strong> 기술을 적용해 사내 문서에서 정확한 근거를 찾아 환각 현상을 최소화하고 답변 신뢰도를 높인다.</p>
+
+        <h2>맞춤형 에이전트 생성</h2>
+        <p>현업 부서별 업무 흐름에 최적화된 맞춤형 에이전트 생성 기능을 지원한다.</p>
+        <ul>
+          <li>IT 전문가 없이도 쉽게 부서별 전문 에이전트 생성 가능한 '노코드(No-Code)' 환경 제공</li>
+          <li>마케팅, 재무, 법무 등 직무 특성에 맞춘 커스터마이징 가능</li>
+          <li>웹, 메일, 메신저(오피스챗), 문서 관리(오피스노트) 등과 심화 연동으로 사내 지식 통합</li>
+        </ul>
+
+        <h2>합리적 가격 정책</h2>
+        <p>오피스에이전트는 <strong>1인 기준 월 9,000원</strong>의 구독형 가격 정책을 채택했다. 이는 ChatGPT 엔터프라이즈 대비 약 75% 절감된 비용으로, 중견·중소기업의 AI 도입 문턱을 대폭 낮췄다.</p>
+
+        <h2>다양한 배포 옵션</h2>
+        <p>클라우드(SaaS) 환경뿐만 아니라 보안 규제가 엄격한 산업군을 위한 <strong>공공 클라우드 및 온프레미스(On-premise)</strong> 배포 옵션도 함께 제공할 예정이다.</p>
+
+        <p>박승애 대표는 "기업들이 보안과 생산성 사이에서 겪는 갈등을 해결하는 것이 오피스에이전트의 개발 목적"이라며 향후 기업 데이터 주권 보호와 실질적 업무 자동화를 지속적으로 개선할 계획을 밝혔다.</p>
+      </div>
+      <div class="blog-post-footer container">
+        <a href="/blog-list" class="btn-outline">← 블로그 목록으로</a>
+      </div>
+    </article>
+  </main>
+  <div id="footer"></div>
+  <script src="/js/common.js"></script>
+  <script type="module" src="__CHATBOT_DOMAIN__/widget-loader.js"></script>
+  <script type="module">
+    (function () {
+      function whenReady(fn) {
+        if (typeof window.ChatWidget?.init === 'function') { fn(); return; }
+        requestAnimationFrame(() => whenReady(fn));
+      }
+      whenReady(() => {
+        window.ChatWidget.init({
+          site_key: '__SITE_KEY__',
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

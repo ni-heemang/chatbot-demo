@@ -28,7 +28,7 @@ function injectHeader() {
           <a href="/price">요금안내</a>
           <a href="/product-brochure">제품소개서</a>
           <a href="/get-started">도입문의</a>
-          <a href="https://whattime.co.kr/officeagent" target="_blank" rel="noopener noreferrer">상담예약 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:4px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://whattime.co.kr/officeagent/call" target="_blank" rel="noopener noreferrer">상담예약 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:4px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
       <div class="nav-item">
@@ -73,7 +73,7 @@ function injectFooter() {
         <a href="/price">요금안내</a>
         <a href="/product-brochure">제품소개서</a>
         <a href="/get-started">도입문의</a>
-        <a href="https://whattime.co.kr/officeagent" target="_blank" rel="noopener noreferrer">상담예약 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:2px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://whattime.co.kr/officeagent/call" target="_blank" rel="noopener noreferrer">상담예약 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:2px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div class="footer-links">
         <h4>콘텐츠</h4>
@@ -83,9 +83,9 @@ function injectFooter() {
         <h4>지원</h4>
         <a href="/webinar">Webinar</a>
         <a href="/faq">FAQ</a>
-        <a href="https://www.jiransoft.co.kr" target="_blank" rel="noopener noreferrer">회사소개 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:2px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="/privacy">개인정보처리방침</a>
-        <a href="/terms">이용약관</a>
+        <a href="https://www.jiransoft.co.kr/company" target="_blank" rel="noopener noreferrer">회사소개 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="vertical-align:middle;margin-left:2px;"><path d="M3.5 2h6.5v6.5M9.5 2.5L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.jiransoft.co.kr/privacy" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+        <a href="https://www.jiransoft.co.kr/service-policy-keeper" target="_blank" rel="noopener noreferrer">이용약관</a>
       </div>
     </div>
     <div class="footer-bottom">
